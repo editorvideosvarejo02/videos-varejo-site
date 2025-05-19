@@ -1,0 +1,195 @@
+:root {
+  --laranja: #ff6a00;
+  --amarelo: #ffd700;
+  --preto: #000;
+  --branco: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--branco);
+  color: var(--preto);
+}
+
+header {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo i {
+  color: var(--laranja);
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+nav a {
+  color: var(--branco);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--amarelo);
+}
+
+.hero {
+  background: linear-gradient(to right, var(--laranja), var(--amarelo));
+  color: var(--preto);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content h1 {
+  animation-delay: 0.2s;
+}
+
+.hero-content p {
+  animation-delay: 0.5s;
+}
+
+.hero-content .btn {
+  animation-delay: 0.8s;
+}
+
+.hero .btn {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.servicos {
+  list-style: none;
+  padding: 0;
+}
+
+.servicos li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.carrossel iframe {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.carrossel iframe:hover {
+  transform: scale(1.02);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 1rem;
+  background: var(--laranja);
+  color: var(--preto);
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--amarelo);
+}
+
+footer {
+  background: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .social a {
+  color: var(--branco);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: var(--amarelo);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* Scroll reveal simples */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
