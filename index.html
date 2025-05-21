@@ -1,74 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vídeos Varejo</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <title>Quiz Interativo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="logo">
-      <i class="fas fa-shopping-cart"></i>
-      <span>Vídeos Varejo</span>
+  <div class="quiz-container">
+    <h1>Quiz de Programação</h1>
+    
+    <div id="start-container">
+      <button id="start-btn" class="start-btn">Começar Quiz</button>
     </div>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Transforme seu produto em um espetáculo visual</h1>
-      <p>Vídeos profissionais e prontos para vender!</p>
-      <a href="#contato" class="btn">Solicite um orçamento</a>
+    <div id="quiz-content" style="display: none;">
+      <div id="progress-text"></div>
+      <div id="timer">Tempo restante: <span id="time-left">15</span>s</div>
+      <div id="question-container"></div>
+      <div id="answer-buttons" class="btn-grid"></div>
+      <button id="next-btn" class="next-btn">Próxima</button>
+      <div id="result-container" class="result-container"></div>
     </div>
-  </section>
+  </div>
 
-  <section id="sobre" class="section reveal">
-    <h2>Sobre a Vídeos Varejo</h2>
-    <p>Fundada em 2020 em Caratinga-MG, a Vídeos Varejo nasceu com o objetivo de revolucionar o mercado de vídeos para o varejo. Oferecemos soluções padronizadas de alta qualidade para milhares de clientes.</p>
-  </section>
+  <!-- Sons -->
+  <audio id="sound-correct" src="https://www.myinstants.com/media/sounds/correct-answer.mp3"></audio>
+  <audio id="sound-wrong" src="https://www.myinstants.com/media/sounds/wrong.mp3"></audio>
 
-  <section id="servicos" class="section reveal">
-    <h2>Nossos Serviços</h2>
-    <ul class="servicos">
-      <li><i class="fas fa-bullhorn"></i> Vídeos para redes sociais</li>
-      <li><i class="fas fa-tv"></i> Comerciais para TV e Internet</li>
-      <li><i class="fas fa-store"></i> Vídeos institucionais para o varejo</li>
-      <li><i class="fas fa-calendar-alt"></i> Campanhas sazonais</li>
-    </ul>
-  </section>
-
-  <section id="portfolio" class="section reveal">
-    <h2>Portfólio</h2>
-    <div class="carrossel">
-      <iframe width="360" height="215" src="https://www.youtube.com/embed/videoseries?list=PLWLyt0RCVDwOKcScZecZL0pWTFZxZUSn2" title="YouTube Playlist" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section id="contato" class="section reveal">
-    <h2>Fale Conosco</h2>
-    <form onsubmit="enviarFormulario(event)">
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu email" required />
-      <textarea placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Vídeos Varejo. Todos os direitos reservados.</p>
-    <div class="social">
-      <a href="https://www.youtube.com/c/V%C3%ADdeosVarejo" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
